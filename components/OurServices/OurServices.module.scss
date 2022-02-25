@@ -1,0 +1,92 @@
+.mainWrapper {
+  background: #1d212d;
+}
+.title {
+  height: 160px;
+  background: url("https://swoop-landing.s3.us-east-2.amazonaws.com/title-background.svg")
+    no-repeat center;
+  background-size: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //   background-position-y: 46%;
+  //   background-position-x: 100%;
+}
+.titleSelf {
+  font-size: 32px;
+  color: white;
+}
+.firstRowBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+.firstRowTitleContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstRowTitle {
+  color: white;
+}
+.firstImageBlockContainer {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firstImageBlock {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2f3547;
+}
+.firstImageSelf {
+  width: 100%;
+  height: 100%;
+}
+.firstImageBlockText {
+  color: white;
+  padding: 15px 62px;
+}
+.secondRowBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.secondRowTitleContainer {
+  width: 50%;
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondRowTitle {
+  color: white;
+}
+.secondImageBlockContainer {
+  width: 50%;
+  order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.secondImageBlock {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2f3547;
+}
+.secondImageSelf {
+  width: 100%;
+  height: 100%;
+}
+.secondImageBlockText {
+  color: white;
+  padding: 15px 62px;
+}

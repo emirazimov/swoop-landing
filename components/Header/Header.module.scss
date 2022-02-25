@@ -1,0 +1,210 @@
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background: #1d212d;
+}
+
+.mainContainerForCar {
+  width: 100%;
+  height: 100%;
+  background: url("https://swoop-landing.s3.us-east-2.amazonaws.com/header-background-car.svg")
+    no-repeat center;
+  background-size: 50%;
+  //   background-position-x: 100%;
+  background-position-y: 46%;
+  background-position-x: 100%;
+  //   padding: 0;
+
+  // @media (max-width: 1700px) {
+  //   background-size: 120%;
+  // }
+  // @media (max-width: 1387px) {
+  //   height: 80vh;
+  // }
+  // @media (max-width: 1113px) {
+  //   height: 70vh;
+  // }
+  // @media (max-width: 977px) {
+  //   height: 60vh;
+  //   background-size: 127%;
+  // }
+  // @media (max-width: 833px) {
+  //   height: 450px;
+  // }
+  // @media (max-width: 689px) {
+  //   background-size: 157%;
+  // }
+  // @media (max-width: 559px) {
+  //   height: 350px;
+  //   // background-position-y: 50%;
+  // }
+
+  // @media (max-width: 451px) {
+  //   height: 320px;
+  // }
+  // @media (max-width: 400px) {
+  //   background-size: 170%;
+  //   background-position-x: 40%;
+  // }
+  // @media (max-width: 366px) {
+  //   background-size: 190%;
+  //   background-position-x: 60%;
+  // }
+  // @media (max-width: 328px) {
+  //   height: 390px;
+  //   background-size: 240%;
+  // }
+}
+.mainContainerForMapBackground {
+  width: 100%;
+  height: 100%;
+  background: url("https://swoop-landing.s3.us-east-2.amazonaws.com/header-backgorund-map.svg")
+    no-repeat center;
+  background-size: 100%;
+  //   background-position-x: 100%;
+  background-position-y: 100%;
+  background-position-x: 100%;
+}
+.headerContainer {
+  height: 100%;
+}
+.headerTextContainer {
+  max-width: 1400px;
+
+  margin: 0px auto;
+  @media (max-width: 1300px) {
+    padding-right: 45px;
+    padding-left: 45px;
+  }
+  @media (max-width: 697px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  //   background-position-y: ;
+}
+.menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  filter: opacity(4);
+  padding-right: 45px;
+  padding-left: 45px;
+
+  //   backdrop-filter: blur(6px);
+  -webkit-filter: opacity(4);
+  position: relative;
+  //   -webkit-backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.28);
+  @media (max-width: 700px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (max-width: 697px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+  @media (max-width: 386px) {
+    height: 100px;
+  }
+}
+.imgContainer {
+  width: auto;
+  // height: 100%;
+  @media (max-width: 1500px) {
+    width: 350px;
+  }
+  // @media (max-width: 700px) {
+  //   margin-left: 20%;
+  // }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media (max-width: 386px) {
+    width: 240px;
+  }
+}
+.ulMenu {
+  //   display: grid;
+  //   grid-template-columns: 1fr 1fr 1fr 1fr;
+  //   grid-auto-columns: minmax(40px, 100px);
+
+  //   justify-content: center;
+
+  display: flex;
+  width: 840px;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  color: white;
+
+  li {
+    font-size: 20px;
+    position: relative;
+  }
+  span {
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%) scaleX(0);
+      -webkit-transform: translateX(-50%) scaleX(0);
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50%;
+      width: 100%;
+      height: 3px;
+      background: white;
+      -webkit-transition: transform 250ms;
+      transition: transform 250ms;
+    }
+    &:hover:after {
+      -webkit-transform: translate(-50%) scaleX(1);
+      transform: translate(-50%) scaleX(1);
+    }
+  }
+  padding: 0px;
+  //   grid-template-columns: minmax(600px, auto);
+}
+.ulMenuMobile {
+  // width: 540px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-right: 32px;
+  margin-top: 30px;
+  list-style-type: none;
+  color: white;
+
+  li {
+    font-size: 20px;
+  }
+  padding: 0px;
+}
+.headerText {
+  max-width: 740px;
+  color: white;
+  font-weight: 700;
+  font-size: 35px;
+  display: grid;
+  justify-content: center;
+  margin-bottom: 110px;
+  @media (max-width: 977px) {
+    margin-bottom: 60px;
+  }
+  @media (max-width: 725px) {
+    margin-top: -100px;
+  }
+  @media (max-width: 559px) {
+    font-size: 29px;
+  }
+  @media (max-width: 479px) {
+    font-size: 23px;
+  }
+}
