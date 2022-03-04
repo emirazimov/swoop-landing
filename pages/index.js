@@ -1,15 +1,79 @@
 import Head from "next/head"
-import Image from "next/image"
+// import Image from "next/image"
+// import Fleet from "../components/Fleet/Fleet"
 import Header from "../components/Header/Header"
 import OurServices from "../components/OurServices/OurServices"
 import styles from "../styles/Home.module.css"
+import dynamic from "next/dynamic"
+import AboutUs from "../components/AboutUs/AboutUs"
+import Contacts from "../components/Contacts/Contacts"
+import Footer from "../components/Footer/Footer"
+import MainContainer from "../components/MainContainer"
+import { Element, Events } from "react-scroll"
+import { useEffect } from "react"
+
+const Fleet = dynamic(() => import("../components/Fleet/Fleet"), {
+  ssr: false,
+})
+
+// const scrollToSectionOurServices = () => {
+//   scroller.scrollTo("OurServices", {
+//     duration: 800,
+//     delay: 0,
+//     smooth: "easeInOutQuart",
+//   })
+// }
+// const scrollToSectionFleet = () => {
+//   scroller.scrollTo("Fleet", {
+//     duration: 800,
+//     delay: 0,
+//     smooth: "easeInOutQuart",
+//   })
+// }
+// const scrollToSectionAboutUs = () => {
+//   scroller.scrollTo("AboutUs", {
+//     duration: 800,
+//     delay: 0,
+//     smooth: "easeInOutQuart",
+//   })
+// }
+// const scrollToSectionContacts = () => {
+//   scroller.scrollTo("Contacts", {
+//     duration: 800,
+//     delay: 0,
+//     smooth: "easeInOutQuart",
+//   })
+// }
 
 export default function Home() {
+  useEffect(() => {
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin", arguments)
+    })
+
+    Events.scrollEvent.register("end", function () {
+      console.log("end", arguments)
+    })
+  }, [])
   return (
-    <>
+    <MainContainer>
       <Header />
-      <OurServices />
-    </>
+      <main>
+        <Element name="OurServices" className="element">
+          <OurServices />
+        </Element>
+        <Element name="Fleet" className="element">
+          <Fleet />
+        </Element>
+        <Element name="AboutUs" className="element">
+          <AboutUs />
+        </Element>
+        <Element name="Contacts" className="element">
+          <Contacts />
+        </Element>
+      </main>
+      <Footer />
+    </MainContainer>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>

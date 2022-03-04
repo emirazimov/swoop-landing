@@ -1,17 +1,19 @@
 // import Image from "next/image"
-// import { CheckmarkIcon, CloseIcon } from "../public/icons"
+import { CheckmarkIcon, CloseIcon } from "../../public/icons"
 // import menuIcon from "../public/menuIcon.png"
 import styles from "./Header.module.scss"
 import Drawer from "@mui/material/Drawer"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import IconButton from "@material-ui/core/IconButton"
-import MenuIcon from "@mui/material/Icon"
+import MenuIcon from "@mui/icons-material/Menu"
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft"
 import ChevronRightIcon from "@mui/icons-material/ChevronRight"
 import { AppBar } from "@material-ui/core"
 
 import { useMediaQuery } from "@material-ui/core"
 import { useState } from "react"
+import { Divider } from "@mui/material"
+import { Link } from "react-scroll"
 
 const drawerWidth = 240
 
@@ -19,7 +21,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     position: "absolute",
-    right: "13px",
+    top: "40%",
+    right: "7%",
   },
   // appBar: {
   //   transition: theme.transitions.create(['margin', 'width'], {
@@ -37,6 +40,7 @@ const useStyles = makeStyles((theme) => ({
   // },
   menuButton: {
     padding: 0,
+    // background: "white",
   },
   hide: {
     display: "none",
@@ -135,7 +139,8 @@ const Header = ({
   scrollToSectionContacts,
 }) => {
   const classes = useStyles()
-  const isMobile = useMediaQuery("(max-width:700px)")
+  const isMobile = useMediaQuery("(max-width:855px)")
+  const isSmallestMobile = useMediaQuery("(max-width:562px)")
 
   const theme = useTheme()
   const [open, setOpen] = useState(false)
@@ -149,88 +154,162 @@ const Header = ({
   }
 
   return (
-    <div className={styles.mainContainer}>
+    <header className={styles.mainContainer}>
       <div className={styles.mainContainerForCar}>
         <div className={styles.mainContainerForMapBackground}>
-          <header className={styles.headerContainer}>
+          <div className={styles.headerContainer}>
             <div className={styles.menu}>
               {isMobile ? (
-                <div className={classes.root}>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    onClick={handleDrawerOpen}
-                    edge="start"
-                    className={classes.menuButton}
-                  >
-                    <MenuIcon
-                      style={{ color: "white", transform: "scale(1.4)" }}
-                    />
-                  </IconButton>
+                <div>
+                  <nav className={classes.root}>
+                    <IconButton
+                      color="inherit"
+                      aria-label="open drawer"
+                      onClick={handleDrawerOpen}
+                      edge="start"
+                      className={classes.menuButton}
+                    >
+                      <MenuIcon
+                        style={{ color: "white", transform: "scale(1.4)" }}
+                      />
+                    </IconButton>
 
-                  <Drawer
-                    className={classes.drawer}
-                    anchor="right"
-                    open={open}
-                    classes={{
-                      paper: classes.drawerPaper,
+                    <Drawer
+                      className={classes.drawer}
+                      anchor="right"
+                      open={open}
+                      classes={{
+                        paper: classes.drawerPaper,
+                      }}
+                    >
+                      <div className={classes.drawerHeader}>
+                        <IconButton onClick={handleDrawerClose}>
+                          {theme.direction === "ltr" ? (
+                            <CloseIcon />
+                          ) : (
+                            <CloseIcon />
+                          )}
+                        </IconButton>
+                      </div>
+                      <ul className={styles.ulMenuMobile}>
+                        <li onClick={scrollToSectionOurServices}>
+                          Our Services
+                        </li>
+                        <li onClick={scrollToSectionFleet}>Fleet</li>
+                        <li>
+                          <a
+                            href="https://checkout.bookinglane.com/swoop-elite"
+                            style={{ textDecoration: "none" }}
+                          >
+                            Get a Quote
+                          </a>
+                        </li>
+                        <li onClick={scrollToSectionAboutUs}>About Us</li>
+                        <li onClick={scrollToSectionContacts}>Contacts</li>
+                      </ul>
+                    </Drawer>
+                  </nav>
+                  <img
+                    src="https://swoop-landing.s3.us-east-2.amazonaws.com/header-logo.svg"
+                    style={{
+                      width: isMobile ? "170px" : "300px",
+                      height: isMobile ? "60px" : "123px",
                     }}
-                  >
-                    <div className={classes.drawerHeader}>
-                      <IconButton onClick={handleDrawerClose}>
-                        {theme.direction === "ltr" ? (
-                          <CloseIcon />
-                        ) : (
-                          <CloseIcon />
-                        )}
-                      </IconButton>
-                    </div>
-                    <ul className={styles.ulMenuMobile}>
-                      <li onClick={scrollToSectionOurServices}>Our Services</li>
-                      <li onClick={scrollToSectionFleet}>Fleet</li>
-                      <li onClick={scrollToSectionAboutUs}>About Us</li>
-                      <li onClick={scrollToSectionContacts}>Contacts</li>
-                    </ul>
-                  </Drawer>
+                  />
                 </div>
               ) : (
-                <ul className={styles.ulMenu}>
-                  <li onClick={scrollToSectionOurServices}>
-                    <span>Our Services</span>
-                  </li>
-                  <li onClick={scrollToSectionFleet}>
-                    <span>Fleet</span>
-                  </li>
-                  <li className={styles.imgContainer}>
+                <nav className={styles.ulMenu}>
+                  {/* <ul className={styles.leftBlock}> */}
+                  <ul className={styles.menuListContainer}>
+                    <li onClick={scrollToSectionOurServices}>
+                      <Link
+                        activeClass="active"
+                        className="OurServices"
+                        to="OurServices"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                      >
+                        <span>Our Services</span>
+                      </Link>
+                    </li>
+                    <li onClick={scrollToSectionFleet}>
+                      <Link
+                        activeClass="active"
+                        className="Fleet"
+                        to="Fleet"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                      >
+                        <span>Fleet</span>
+                      </Link>
+                    </li>
+                    <li onClick={scrollToSectionFleet}>
+                      <span>
+                        <a
+                          href="https://checkout.bookinglane.com/swoop-elite"
+                          style={{ textDecoration: "none" }}
+                        >
+                          Get a Quote
+                        </a>
+                      </span>
+                    </li>
+                    {/* </ul> */}
+                    {/* <li className={styles.imgContainer}>
                     <img
                       src="https://swoop-landing.s3.us-east-2.amazonaws.com/header-logo.svg"
-                      style={{ width: "300px", height: "140px" }}
+                      // style={{ width: "300px", height: "123px" }}
                     />
-                  </li>
-                  <li onClick={scrollToSectionAboutUs}>
-                    <span>About Us</span>
-                  </li>
-                  <li onClick={scrollToSectionContacts}>
-                    <span>Contacts</span>
-                  </li>
-                </ul>
+                  </li> */}
+                    {/* <ul className={styles.rightBlock}> */}
+                    <li onClick={scrollToSectionAboutUs}>
+                      <Link
+                        activeClass="active"
+                        className="AboutUs"
+                        to="AboutUs"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                      >
+                        <span>About Us</span>
+                      </Link>
+                    </li>
+                    <li onClick={scrollToSectionContacts}>
+                      <Link
+                        activeClass="active"
+                        className="Contacts"
+                        to="Contacts"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                      >
+                        <span>Contacts</span>
+                      </Link>
+                    </li>
+                  </ul>
+                  {/* </ul> */}
+                </nav>
               )}
             </div>
             <div className={styles.headerTextContainer}>
               <div className={styles.headerText}>
                 <img
                   src="https://swoop-landing.s3.us-east-2.amazonaws.com/header-logo.svg"
-                  style={{ width: "500px", height: "240px" }}
+                  // style={{
+                  //   width: isMobile ? "320px" : "500px",
+                  //   height: isMobile ? "190px" : "240px",
+                  // }}
                 ></img>
                 <span>
                   LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE.
                 </span>
               </div>
             </div>
-          </header>
+          </div>
         </div>
       </div>
-    </div>
+    </header>
   )
 }
 

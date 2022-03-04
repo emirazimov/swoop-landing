@@ -14,3 +14,25 @@ a {
 * {
   box-sizing: border-box;
 }
+.slick-list {
+  order: 2;
+}
+/* @media (max-width: 674px) {
+  .slick-slide {
+    width: 100%;
+  }
+  .slick-slide div {
+    width: 100%;
+  }
+} */
+@media (max-width: 721px) {
+  .slick-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* .slick-dots li {
+  width: 100%;
+  height: 100%;
+  margin: 25px 0;
+} */

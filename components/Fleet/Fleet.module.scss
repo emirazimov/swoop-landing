@@ -1,0 +1,175 @@
+@use "../Global.scss/blocks_title.scss" as *;
+
+.mainContainer {
+  background: url("https://swoop-landing.s3.us-east-2.amazonaws.com/fleet-background-min.jpg")
+    no-repeat center;
+  background-size: 140%;
+  //   background-position-x: ;
+  background-position-y: 0%;
+  @media (max-width: 1529px) {
+    background-size: 150%;
+  }
+  @media (max-width: 1261px) {
+    background-size: 160%;
+  }
+  @media (max-width: 1165px) {
+    // height: 700px;
+  }
+  @media (max-width: 1029px) {
+    // height: 600px;
+  }
+  @media (max-width: 871px) {
+    // height: 530px;
+    background-size: 200%;
+  }
+  @media (max-width: 781px) {
+    background-size: 320%;
+  }
+  @media (max-width: 669px) {
+    background-size: 370%;
+  }
+  @media (max-width: 549px) {
+    background-size: 430%;
+  }
+  @media (max-width: 491px) {
+    background-size: 480%;
+  }
+  @media (max-width: 445px) {
+    background-size: 550%;
+  }
+  @media (max-width: 381px) {
+    background-size: 650%;
+  }
+}
+.wrapper {
+  max-width: 1300px;
+
+  margin: 0px auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-right: 45px;
+  padding-left: 45px;
+  @media (max-width: 697px) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+.titleContainer {
+  @include titleBackground;
+
+  @media (max-width: 1029px) {
+    margin-bottom: 0px;
+  }
+
+  //   span {
+  //     margin-bottom: 8px;
+  //   }
+}
+.title {
+  @include title;
+  color: black;
+}
+.carouselContainer {
+  display: flex;
+  //   flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: 781px) {
+    padding-top: 25px;
+  }
+}
+// .imageContainer {
+//   width: 100%;
+// }
+
+.imageBackground {
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  background: #ffffff;
+  opacity: 0.5;
+  left: 17%;
+  //   @media (max-width: 721px) {
+  //     width: 70%;
+  //     height: 70%;
+  //   }
+}
+// .carouselSelf {
+//   width: 800px;
+// }
+.carouselItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 450px;
+  // @media (max-width: 1289px) {
+  //   width: 400px;
+  // }
+  .carouselItemImgContainer {
+    width: 78%;
+  }
+  span {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 50px;
+    @media (max-width: 1165px) {
+      margin-top: 40px;
+    }
+  }
+}
+.carouselItemMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  @media (max-width: 679px) {
+    width: 300px;
+  }
+
+  span {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+.reactSlickDots {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  list-style-type: none;
+  @media (max-width: 721px) {
+    text-align: center;
+  }
+  li {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+.reactSlickDotSelf {
+  font-weight: 700;
+  font-size: 26px;
+  cursor: pointer;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%) scaleX(0);
+    -webkit-transform: translateX(-50%) scaleX(0);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50%;
+    width: 100%;
+    height: 3px;
+    background: black;
+    -webkit-transition: transform 250ms;
+    transition: transform 250ms;
+  }
+  &:hover:after {
+    -webkit-transform: translate(-50%) scaleX(1);
+    transform: translate(-50%) scaleX(1);
+  }
+}
