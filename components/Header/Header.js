@@ -302,7 +302,9 @@ const Header = ({
                   // }}
                 ></img>
                 <span>
-                  LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE.
+                  LUXURY LIMOUSINES.
+                  <br /> PROFESSIONAL CHAUFFEURS.
+                  <br /> PREMIUM SERVICE.
                 </span>
               </div>
             </div>
