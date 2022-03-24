@@ -5,17 +5,20 @@ const MainContainer = ({ children, keywords }) => {
   return (
     <>
       <Head>
-        <title>Swoop Elite</title>
+        <title>
+          Swoop Elite - LUXURY LIMOUSINES. PROFESSIONAL CHAUFFEURS. PREMIUM
+          SERVICE.
+        </title>
         <meta charSet="utf-8" />
         <link
           rel="icon"
           href="https://swoop-landing.s3.us-east-2.amazonaws.com/title-background.svg "
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
+        {/* <meta name="theme-color" content="#000000" /> */}
         <meta
           name="keywords"
-          content="airport transfers,wine tours,Point to Point Transportation,City Tours,Weddings,Hourly Chauffer Services,dlxlimousine@gmail.com,dlxlimousine,Deluxe limo, transportation company, Dispatch Software , limo software, Limo Dispatch System,  Flight Tracker, Driver Tracker, Limo Dispatching System, Livery Software, Limo Service Scheduling Software, Best Limo Software, online reservations, friendly limo software"
+          content="airport transfers,wine tours,Point to Point Transportation,City Tours,Weddings,Hourly Chauffer Services, transportation company, Dispatch Software , limo software, Limo Dispatch System,  Flight Tracker, Driver Tracker, Limo Dispatching System, Livery Software, Limo Service Scheduling Software, Best Limo Software, online reservations, friendly limo software"
           //   keywords={
           //     "booking,book,bookinglane,trasnport,transportation,book transport,booking transport,crm mobile, moile crm" +
           //     keywords
@@ -48,9 +51,29 @@ const MainContainer = ({ children, keywords }) => {
         <meta name="robots" content="max-snippet:-1"></meta>
         <meta name="robots" content="max-image-preview:large"></meta>
         <meta name="robots" content="index, follow"></meta>
-        <meta property="og:title" content="Swoop Elite" />
+        <meta name="robots" content="max-video-preview:-1"></meta>
+
+        <meta
+          name="googlebot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        ></meta>
+        <meta
+          name="bingbot"
+          content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+        ></meta>
+
+        <meta property="og:locale" content="en_US"></meta>
+        <meta
+          property="og:title"
+          content="Swoop Elite - LUXURY LIMOUSINES. PROFESSIONAL CHAUFFEURS. PREMIUM
+          SERVICE."
+        />
         <meta property="og:url" content="https://swoopelite.com/"></meta>
-        <meta property="og:type" content="article"></meta>
+        <meta property="og:type" content="website"></meta>
+        <meta
+          property="og:site_name"
+          content="LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE."
+        ></meta>
         <meta
           property="og:description"
           content="LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE."
@@ -60,7 +83,11 @@ const MainContainer = ({ children, keywords }) => {
           content="https://swoop-landing.s3.us-east-2.amazonaws.com/header-logo.svg"
         ></meta>
         {/* <meta property="fb:app_id" content="APPID" /> */}
-        <meta property="twitter:title" content="Swoop Elite"></meta>
+        <meta
+          property="twitter:title"
+          content="Swoop Elite - LUXURY LIMOUSINES. PROFESSIONAL CHAUFFEURS. PREMIUM
+          SERVICE."
+        ></meta>
         <meta
           property="twitter:description"
           content="LUXURY LIMOUSINES, PROFESSIONAL CHAUFFEURS, PREMIUM SERVICE."
@@ -69,13 +96,14 @@ const MainContainer = ({ children, keywords }) => {
           property="twitter:image"
           content="https://swoop-landing.s3.us-east-2.amazonaws.com/header-logo.svg"
         ></meta>
+        <meta property="twitter:card" content="summary_large_image"></meta>
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <meta name="theme-color" content="#000000" />
+        {/* <meta name="theme-color" content="#000000" /> */}
         {/* <meta http-equiv="X-UA-Compatible" content="ie=edge" /> */}
-        <meta property="twitter:card" content="summary"></meta>
+        {/* <meta property="twitter:card" content="summary"></meta> */}
 
         {/* <script
           src="https://apis.google.com/js/api.js"

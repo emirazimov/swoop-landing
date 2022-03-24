@@ -61,6 +61,10 @@
   flex-direction: column;
   align-items: center;
   background: #2f3547;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   @media (max-width: 560px) {
     width: 90%;
   }

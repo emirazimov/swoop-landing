@@ -17,7 +17,7 @@ const AboutUs = () => {
             thirdViewBox={"165"}
           /> */}
         </div>
-        <div className={styles.contentContainer}>
+        <figure className={styles.contentContainer}>
           <div className={styles.imgContainer}>
             <img
               src="https://swoop-landing.s3.us-east-2.amazonaws.com/about-us-image.webp"
@@ -26,7 +26,7 @@ const AboutUs = () => {
             />
           </div>
           <div className={styles.textContainer}>
-            <p>
+            <figcaption>
               At Swoop Elite Services our employees and chauffeurs understand
               the importance of delivering exemplary service throughout every
               ride. Whether your destination is twenty minutes or two hours
@@ -34,9 +34,9 @@ const AboutUs = () => {
               time, and enjoying your journey. Enlist our experts for your next
               corporate or leisure travel and we guarantee you will never need
               another transportation company again.
-            </p>
+            </figcaption>
           </div>
-        </div>
+        </figure>
       </div>
     </div>
   )

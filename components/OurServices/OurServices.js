@@ -24,18 +24,18 @@ const OurServices = ({
             <h4 className={styles.firstRowTitle}>Airport Transfers</h4>
           </div>
           <div className={styles.firstImageBlockContainer}>
-            <div className={styles.firstImageBlock}>
+            <figure className={styles.firstImageBlock}>
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image1.webp"
                 className={styles.firstImageSelf}
               ></img>
-              <p className={styles.firstImageBlockText}>
+              <figcaption className={styles.firstImageBlockText}>
                 From the terminal to your front door, Swoop Elite gets you there
                 on time and in style. Our drivers will usher you directly to or
                 from any airport, in one of our first-class luxury cars or
                 limousines.
-              </p>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div className={styles.secondRowBlock}>
@@ -43,18 +43,18 @@ const OurServices = ({
             <h4 className={styles.secondRowTitle}>Hourly Chauffer Services</h4>
           </div>
           <div className={styles.secondImageBlockContainer}>
-            <div className={styles.secondImageBlock}>
+            <figure className={styles.secondImageBlock}>
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image2.webp"
                 className={styles.secondImageSelf}
               ></img>
-              <p className={styles.secondImageBlockText}>
+              <figcaption className={styles.secondImageBlockText}>
                 From the terminal to your front door, Swoop Elite gets you there
                 on time and in style. Our drivers will usher you directly to or
                 from any airport, in one of our first-class luxury cars or
                 limousines.
-              </p>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div className={styles.thirdRowBlock}>
@@ -66,18 +66,18 @@ const OurServices = ({
             </h4>
           </div>
           <div className={styles.thirdImageBlockContainer}>
-            <div className={styles.thirdImageBlock}>
+            <figure className={styles.thirdImageBlock}>
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image3.webp"
                 className={styles.thirdImageSelf}
               ></img>
-              <p className={styles.thirdImageBlockText}>
+              <figcaption className={styles.thirdImageBlockText}>
                 {`If you need a ride but aren't excited about taking another ride
                 service or driving yourself, then our point to point
                 transportation service is for you. Choose one of our luxury
                 vehicles and ride in style instead!`}
-              </p>
-            </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>

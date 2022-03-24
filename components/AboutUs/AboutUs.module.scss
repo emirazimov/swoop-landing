@@ -36,6 +36,10 @@
   font-size: 17px;
   line-height: 29px;
   padding-right: 60px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   @media (max-width: 1143px) {
     // grid-template-columns: 1fr;
     // justify-items: center;
