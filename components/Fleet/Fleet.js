@@ -186,7 +186,7 @@ const Fleet = () => {
                 <div className={styles.imageBackground}></div>
                 <img
                   src={img}
-                  alt={img}
+                  alt="fleet"
                   style={{
                     position: "relative",
                     width: "100%",

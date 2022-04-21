@@ -215,6 +215,7 @@ const Header = ({
                       width: isMobile ? "170px" : "300px",
                       height: isMobile ? "60px" : "123px",
                     }}
+                    alt="headerLogo"
                   />
                 </div>
               ) : (
@@ -300,6 +301,7 @@ const Header = ({
                   //   width: isMobile ? "320px" : "500px",
                   //   height: isMobile ? "190px" : "240px",
                   // }}
+                  alt="headerLogo"
                 ></img>
                 <span>
                   LUXURY LIMOUSINES.

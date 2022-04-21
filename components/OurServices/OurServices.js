@@ -28,6 +28,7 @@ const OurServices = ({
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image1.webp"
                 className={styles.firstImageSelf}
+                alt="ourservicesImage1"
               ></img>
               <figcaption className={styles.firstImageBlockText}>
                 From the terminal to your front door, Swoop Elite gets you there
@@ -47,6 +48,7 @@ const OurServices = ({
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image2.webp"
                 className={styles.secondImageSelf}
+                alt="ourservicesImage2"
               ></img>
               <figcaption className={styles.secondImageBlockText}>
                 From the terminal to your front door, Swoop Elite gets you there
@@ -70,6 +72,7 @@ const OurServices = ({
               <img
                 src="https://swoop-landing.s3.us-east-2.amazonaws.com/ourservices-image3.webp"
                 className={styles.thirdImageSelf}
+                alt="ourservicesImage3"
               ></img>
               <figcaption className={styles.thirdImageBlockText}>
                 {`If you need a ride but aren't excited about taking another ride
